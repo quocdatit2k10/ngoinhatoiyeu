@@ -28,6 +28,13 @@
 		{foreach from=$infos item=info}
 			<div class="col-xs-6">{$info.text}</div>
 		{/foreach}
+		<script type="text/javascript">
+		$(document).ready(function() {
+	        var src = "skype:ngoinhatoiyeu?chat";
+	        var a = $("<a/>").attr("href", src);
+	        $("#aSkype").wrap(a);
+		});
+		</script>
 </div>
 <!-- /MODULE Block cmsinfo -->
 {/if}
