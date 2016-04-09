@@ -122,6 +122,7 @@ function calcPrice()
 
 function calcPriceTI()
 {
+
 	var priceTE = parseFloat(document.getElementById('priceTEReal').value.replace(/,/g, '.'));
 	var newPrice = addTaxes(priceTE);
 
@@ -140,9 +141,7 @@ function calcPriceTI()
 	}
 	else
 	{
-		//$('#priceTI').val((parseFloat($('#priceTI').val()) + getEcotaxTaxIncluded()).toFixed(priceDisplayPrecision));
-		//$('#finalPrice').html(parseFloat($('#priceTI').val()).toFixed(priceDisplayPrecision));
-		$('#priceTI').val((parseFloat($('#priceTI').val()) + getEcotaxTaxIncluded()).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+		$('#priceTI').val((parseFloat($('#priceTI').val()) + getEcotaxTaxIncluded()).toFixed(priceDisplayPrecision));
 		$('#finalPrice').html(parseFloat($('#priceTI').val()).toFixed(priceDisplayPrecision));
 	}
 }

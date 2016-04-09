@@ -183,7 +183,7 @@ class ContactControllerCore extends FrontController
                         }
                     }
 
-                    if (!empty($contact->email)) {
+                    if (empty($contact->email)) {
                         Mail::Send($this->context->language->id, 'contact_form', ((isset($ct) && Validate::isLoadedObject($ct)) ? sprintf(Mail::l('Your message has been correctly sent #ct%1$s #tc%2$s'), $ct->id, $ct->token) : Mail::l('Your message has been correctly sent')), $var_list, $from, null, null, null, $file_attachment);
                     } else {
                         if (!Mail::Send($this->context->language->id, 'contact', Mail::l('Message from contact form').' [no_sync]',

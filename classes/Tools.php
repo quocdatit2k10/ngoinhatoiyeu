@@ -683,38 +683,33 @@ class ToolsCore
             $c_format = 4;
         }
 
-    switch ($c_format)         
-    {              /* X 0,000.00 */              
-    	case 1:                
-    		$ret = $c_char.$blank.number_format($price, $c_decimals, '.', ',');                
-    		break;            /* 0 000,00 X*/            
-    	case 2:                
-    		$ret = number_format($price, $c_decimals, ',', ' ').$blank.$c_char;                
-    		break;            /* X 0.000,00 */            
-    	case 3:                
-    		$ret = $c_char.$blank.number_format($price, $c_decimals, ',', '.');                
-    		break;            /* 0,000.00 X */            
-    	case 4:                
-    		$ret = number_format($price, $c_decimals, '.', ',').$blank.$c_char;                
-    		break;            /* 0.000 X as with VND*/            
-    	case 5:                
-    		$ret = number_format($price, 0, '.', '.').$blank.$c_char;                
-    		break;            /* 0 000 X as with VND*/            
-    	case 6:                
-    		$ret = number_format($price, 0, ' ', ' ').$blank.$c_char;                
-    		break;            /* 0.000.000X as with VND*/            
-    	case 7:                
-    		$ret = number_format($price, 3, '.', '.').$blank.$c_char;                
-    		break;            /* 0 000 000X as with VND*/            
-    	case 8:                
-    		$ret = number_format($price, 3, ' ', ' ').$blank.$c_char;                
-    		break;                                                        
-    }
+        switch ($c_format) {
+            /* X 0,000.00 */
+            case 1:
+                $ret = $c_char.$blank.number_format($price, $c_decimals, '.', ',');
+                break;
+            /* 0 000,00 X*/
+            case 2:
+                $ret = number_format($price, $c_decimals, ',', ' ').$blank.$c_char;
+                break;
+            /* X 0.000,00 */
+            case 3:
+                $ret = $c_char.$blank.number_format($price, $c_decimals, ',', '.');
+                break;
+            /* 0,000.00 X */
+            case 4:
+                $ret = number_format($price, $c_decimals, '.', ',').$blank.$c_char;
+                break;
+            /* X 0'000.00  Added for the switzerland currency */
+            case 5:
+                $ret = number_format($price, $c_decimals, '.', "'").$blank.$c_char;
+                break;
+        }
         if ($is_negative) {
             $ret = '-'.$ret;
         }
         if ($no_utf8) {
-            return str_replace('遶・ｽｬ', chr(128), $ret);
+            return str_replace('竄ｬ', chr(128), $ret);
         }
         return $ret;
     }
@@ -756,9 +751,11 @@ class ToolsCore
     public static function convertPrice($price, $currency = null, $to_currency = true, Context $context = null)
     {
         static $default_currency = null;
+
         if ($default_currency === null) {
             $default_currency = (int)Configuration::get('PS_CURRENCY_DEFAULT');
         }
+
         if (!$context) {
             $context = Context::getContext();
         }
@@ -1531,9 +1528,9 @@ class ToolsCore
             /* YU */ '/[\x{042E}]/u',
             /* ZH */ '/[\x{0416}]/u');
 
-            // ・・ｽｶ to oe
-            // ・・ｽ･ to aa
-            // ・・ｽ､ to ae
+            // ﾃｶ to oe
+            // ﾃ･ to aa
+            // ﾃ､ to ae
 
         $replacements = array(
                 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 'ss', 't', 'u', 'v', 'w', 'y', 'z', 'ae', 'ch', 'kh', 'oe', 'sh', 'shh', 'ya', 'ye', 'yi', 'yo', 'yu', 'zh',
@@ -1847,7 +1844,7 @@ class ToolsCore
     public static function iconv($from, $to, $string)
     {
         if (function_exists('iconv')) {
-            return iconv($from, $to.'//TRANSLIT', str_replace('・ゑｽ･', '&yen;', str_replace('・ゑｽ｣', '&pound;', str_replace('遶・ｽｬ', '&euro;', $string))));
+            return iconv($from, $to.'//TRANSLIT', str_replace('ﾂ･', '&yen;', str_replace('ﾂ｣', '&pound;', str_replace('竄ｬ', '&euro;', $string))));
         }
         return html_entity_decode(htmlentities($string, ENT_NOQUOTES, $from), ENT_NOQUOTES, $to);
     }
