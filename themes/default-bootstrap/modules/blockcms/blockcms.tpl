@@ -123,12 +123,10 @@
 		</ul>
 		{$footer_text}
 	</section>
-	{if $display_poweredby}
 	<section class="bottom-footer col-xs-12">
 		<div>
-			{l s='[1] %3$s %2$s - Ecommerce software by %1$s [/1]' mod='blockcms' sprintf=['PrestaShop™', 'Y'|date, '©'] tags=['<a class="_blank" href="http://www.prestashop.com">'] nocache}
+			{l s='[1] %3$s %2$s - Thiết kế bởi %1$s [/1]' mod='blockcms' sprintf=['Ngôi nhà tôi yêu™', 'Y'|date, '©'] tags=['<a class="_blank" href="">'] nocache}
 		</div>
 	</section>
-	{/if}
 	<!-- /Block CMS module footer -->
 {/if}

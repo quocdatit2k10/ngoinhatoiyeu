@@ -46,9 +46,7 @@
 			<select  id="add_product_warehouse" name="add_product_warehouse"></select>
 		</div>
 	</td>
-	{if ($order->getTaxCalculationMethod() != $smarty.const.PS_TAX_EXC)}
-	<td></td>
-	{/if}
+
 	<td style="display:none;">
 		<div class="row">
 			<div class="input-group fixed-width-xl">

@@ -29,7 +29,7 @@
 <div id="footer" class="bootstrap hide">
 
 	<div class="col-sm-2 hidden-xs">
-		<a href="http://www.prestashop.com/" class="_blank">PrestaShop&trade;</a>
+		<a href="http://www.prestashop.com/" class="_blank">Ngôi nhà tôi yêu&trade;</a>
 		-
 		<span id="footer-load-time"><i class="icon-time" title="{l s='Load time: '}"></i> {number_format(microtime(true) - $timer_start, 3, '.', '')}s</span>
 	</div>
@@ -84,7 +84,7 @@
 			</a>
 			{/if}
 			{if $iso_is_fr && !$host_mode}
-			<p>Questions • Renseignements • Formations :
+			<p>Questions 窶｢ Renseignements 窶｢ Formations :
 				<strong>+33 (0)1.40.18.30.04</strong>
 			</p>
 			{/if}

@@ -259,8 +259,7 @@ $('#free_gift_on').click(function(){
 	toggleGiftProduct();}
 );
 $('#free_gift_off').click(function(){
-	toggleGiftProduct();
-	$('#gift_products_found').hide();}
+	toggleGiftProduct();}
 );
 toggleGiftProduct();
 

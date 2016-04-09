@@ -1380,15 +1380,13 @@ class AdminControllerCore extends Controller
                 if (isset($values['type']) && $values['type'] == 'textLang') {
                     foreach ($languages as $language) {
                         if (Tools::getValue($field.'_'.$language['id_lang']) && isset($values['validation'])) {
-                            $values_validation = $values['validation'];
-                            if (!Validate::$values_validation(Tools::getValue($field.'_'.$language['id_lang']))) {
+                            if (!Validate::$values['validation'](Tools::getValue($field.'_'.$language['id_lang']))) {
                                 $this->errors[] = sprintf(Tools::displayError('field %s is invalid.'), $values['title']);
                             }
                         }
                     }
                 } elseif (Tools::getValue($field) && isset($values['validation'])) {
-                    $values_validation = $values['validation'];
-                    if (!Validate::$values_validation(Tools::getValue($field))) {
+                    if (!Validate::$values['validation'](Tools::getValue($field))) {
                         $this->errors[] = sprintf(Tools::displayError('field %s is invalid.'), $values['title']);
                     }
                 }
@@ -2227,9 +2225,6 @@ class AdminControllerCore extends Controller
             'addons_forgot_password_link' => '//addons.prestashop.com/'.$this->context->language->iso_code.'/forgot-your-password'
         ));
 
-        //Force override translation key
-        Context::getContext()->override_controller_name_for_translations = 'AdminModules';
-
         $this->modals[] = array(
             'modal_id' => 'modal_addons_connect',
             'modal_class' => 'modal-md',
@@ -2239,9 +2234,6 @@ class AdminControllerCore extends Controller
             .'&utm_content='.(defined('_PS_HOST_MODE_') ? 'cloud' : 'download').'">PrestaShop Addons</a>',
             'modal_content' => $this->context->smarty->fetch('controllers/modules/login_addons.tpl'),
         );
-
-        //After override translation, remove it
-        Context::getContext()->override_controller_name_for_translations = null;
     }
 
     /**
@@ -3633,8 +3625,7 @@ class AdminControllerCore extends Controller
         if (isset($field['validation'])) {
             $valid_method_exists = method_exists('Validate', $field['validation']);
             if ((!isset($field['empty']) || !$field['empty'] || (isset($field['empty']) && $field['empty'] && $value)) && $valid_method_exists) {
-                $field_validation = $field['validation'];
-                if (!Validate::$field_validation($value)) {
+                if (!Validate::$field['validation']($value)) {
                     $this->errors[] = Tools::displayError($field['title'].' : Incorrect value');
                     return false;
                 }
