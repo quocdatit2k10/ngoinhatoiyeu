@@ -98,7 +98,9 @@
 			{/if}
 			{if $field_name eq 'postcode'}
 				{assign var="postCodeExist" value=true}
-				<div class="required postcode form-group unvisible">
+				<div class="required postcode form-group unvisible">                 
+				
+				
 					<label for="postcode">{l s='Zip/Postal Code'}</label>
 					<input class="validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="postcode" name="postcode" value="{if isset($smarty.post.postcode)}{$smarty.post.postcode}{else}{if isset($address->postcode)}{$address->postcode|escape:'html':'UTF-8'}{/if}{/if}" />
 				</div>
