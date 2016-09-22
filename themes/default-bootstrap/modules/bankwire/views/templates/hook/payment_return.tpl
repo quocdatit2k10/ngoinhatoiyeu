@@ -36,8 +36,6 @@
  		<br />- {l s='Name of account owner' mod='bankwire'}  <strong>{if $bankwireOwner}{$bankwireOwner}{else}___________{/if}</strong> 
  		<br />- {l s='Bank name' mod='bankwire'}  <strong>Á Châu (ACB)  - chi nhánh Kỳ Hòa</strong> 
  		<br />-	Nội dung: Thanh toán ĐH <strong>{$reference}</strong>  
- 		
- 		
  		<br /> 
 		<br />- {l s='Amount' mod='bankwire'} <span class="price"><strong>{$total_to_pay}</strong></span>
 		{if !isset($reference)}
