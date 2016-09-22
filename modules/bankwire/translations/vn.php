@@ -36,11 +36,11 @@ $_MODULE['<{bankwire}prestashop>payment_execution_46b9e3665f187c739c55983f757ccd
 $_MODULE['<{bankwire}prestashop>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = 'Phương thức khác';
 $_MODULE['<{bankwire}prestashop>infos_c1be305030739396775edaca9813f77d'] = 'Mô-đun này cho phép bạn chấp nhận thanh toán bằng chuyển khoản.';
 $_MODULE['<{bankwire}prestashop>infos_60742d06006fde3043c77e6549d71a99'] = 'Nếu khách hàng lựa chọn thanh toán bằng chuyển khoản, trạng thái đơn đặt hàng sẽ được đổi thành \'đang chờ thanh toán\'';
-$_MODULE['<{bankwire}prestashop>payment_return_1f8cdc30326f1f930b0c87b25fdac965'] = 'Xin vui lòng gửi cho chúng tôi với thông tin dưới đây:';
+$_MODULE['<{bankwire}prestashop>payment_return_1f8cdc30326f1f930b0c87b25fdac965'] = 'Để đơn hàng được thực hiện, vui lòng chuyển khoản cho chúng tôi theo thông tin sau:';
 $_MODULE['<{bankwire}prestashop>payment_return_b2f40690858b404ed10e62bdf422c704'] = 'số lượng tiền là';
-$_MODULE['<{bankwire}prestashop>payment_return_5ca0b1b910f393ed1f9f6fa99e414255'] = 'Tên tài khoản:';
+$_MODULE['<{bankwire}prestashop>payment_return_5ca0b1b910f393ed1f9f6fa99e414255'] = 'Người thụ hưởng:';
 $_MODULE['<{bankwire}prestashop>payment_return_d717aa33e18263b8405ba00e94353cdc'] = 'Số tài khoản:';
-$_MODULE['<{bankwire}prestashop>payment_return_984482eb9ff11e6310fef641d2268a2a'] = 'Ngân hàng:';
+$_MODULE['<{bankwire}prestashop>payment_return_984482eb9ff11e6310fef641d2268a2a'] = 'Tại:';
 $_MODULE['<{bankwire}prestashop>payment_return_19c419a8a4f1cd621853376a930a2e24'] = 'Chúng tôi đã gửi thông tin chi tiết đơn hàng đến e-mail của bạn';
 $_MODULE['<{bankwire}prestashop>payment_return_b9a1cae09e5754424e33764777cfcaa0'] = 'Thứ tự của bạn sẽ được gửi ngay sau khi chúng tôi nhận được thanh toán của bạn.';
 $_MODULE['<{bankwire}prestashop>payment_return_ca7e41a658753c87973936d7ce2429a8'] = 'Đối với bất kỳ câu hỏi hay cho biết thêm chi tiết, xin vui lòng liên hệ với chúng tôi';

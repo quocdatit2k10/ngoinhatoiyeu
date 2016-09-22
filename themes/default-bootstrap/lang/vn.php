@@ -1,4 +1,24 @@
 <?php
+ 
+global $_LANG;
+$_LANG = array();
+$_LANG['404_44b1d05764b093cb00c25b8228cb87d3'] = 'Trang này không khả dụng';
+$_LANG['404_6554aae881e40036cac1f5710a4c52c1'] = 'Xin lỗi, địa chỉ web bạn vừa nhập không còn tồi tại';
+$_LANG['404_7b19b37e7fc3dfe3c3e1ad5b84c7f565'] = 'Trang chủ';
+$_LANG['404_8cf04a9734132302f96da8e113e80ce5'] = 'Trang chủ';
+$_LANG['404_9bec38acab82302a8cf6fbb9182da21f'] = 'Để tìm 1 sản phẩm, vui lòng nhập tên của nó vào trường dưới đây';
+$_LANG['404_a60852f204ed8028c1c58808b746d115'] = 'Ok';
+$_LANG['404_a68ba7d969d1294a35138fa501dfb078'] = 'Tìm kiếm trong danh mục sản phẩm:';
+$_LANG['address_0f68b904e33d9ac04605aecc958bcf52'] = 'Thông tin thêm';
+$_LANG['address_19f823c6453c2b1ffd09cb715214813d'] = 'Phần bắt buộc';
+$_LANG['address_1c76cbfe21c6f44c1d1e59d54f3e4420'] = 'Công ty';
+$_LANG['address_20db0bfeecd8fe60533206a2b5e9891a'] = 'Họ';
+$_LANG['address_3908e1afa0ff22fbf112aff3c5ba55c1'] = 'Địa chỉ của bạn';
+$_LANG['address_393d8c6bc7a04264bd9523dc8c92b818'] = 'Địa chỉ mới';
+$_LANG['address_41c2fff4867cc204120f001e7af20f7a'] = 'Số di động:';
+$_LANG['address_455175f3f5be6306247babb349c0515a'] = 'Địa chỉ của bạn';
+$_LANG['address_46a2a41cc6e552044816a2d04634545d'] = 'Tỉnh';
+$_LANG['address_57d056ed0984166336b7879c2af3657f'] = 'Thành phố';
 
 global $_LANG;
 $_LANG = array();
