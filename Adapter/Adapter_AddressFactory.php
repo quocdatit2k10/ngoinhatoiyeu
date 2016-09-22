@@ -1,5 +1,5 @@
 <?php
-/**aaaaaa
+/**aaaaaaccccccccccccccccccccccc
  * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
