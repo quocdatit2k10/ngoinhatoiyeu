@@ -30,12 +30,13 @@
 		<br />- {l s='Include these details' mod='bankwire'}  <strong>{if $bankwireDetails}{$bankwireDetails}{else}___________{/if}</strong>
 		<br />- {l s='Name of account owner' mod='bankwire'}  <strong>{if $bankwireOwner}{$bankwireOwner}{else}___________{/if}</strong>
 		<br />- {l s='Bank name' mod='bankwire'}  <strong>{if $bankwireAddress}{$bankwireAddress}{else}___________{/if}</strong>
-<!-- 		<br />-	Nội dung: Thanh toán ĐH <strong>{$reference}</strong> hoặc  -->
-<!-- 		<br />Hoặc -->
-<!-- 		<br />- {l s='Include these details' mod='bankwire'}  <strong>57170679</strong> -->
-<!-- 		<br />- {l s='Name of account owner' mod='bankwire'}  <strong>{if $bankwireOwner}{$bankwireOwner}{else}___________{/if}</strong> -->
-<!-- 		<br />- {l s='Bank name' mod='bankwire'}  <strong>Á Châu (ACB)  - chi nhánh Kỳ Hòa</strong> -->
-<!-- 		<br /> -->
+ 		<br />-	Nội dung: Thanh toán ĐH <strong>{$reference}</strong>  
+ 		<br />Hoặc 
+ 		<br />- {l s='Include these details' mod='bankwire'}  <strong>57170679</strong> 
+ 		<br />- {l s='Name of account owner' mod='bankwire'}  <strong>{if $bankwireOwner}{$bankwireOwner}{else}___________{/if}</strong> 
+ 		<br />- {l s='Bank name' mod='bankwire'}  <strong>Á Châu (ACB)  - chi nhánh Kỳ Hòa</strong> 
+ 		<br />-	Nội dung: Thanh toán ĐH <strong>{$reference}</strong>  
+ 		<br /> 
 		<br />- {l s='Amount' mod='bankwire'} <span class="price"><strong>{$total_to_pay}</strong></span>
 		{if !isset($reference)}
 			<br />- {l s='Do not forget to insert your order number #%d in the subject of your bank wire.' sprintf=$id_order mod='bankwire'}
